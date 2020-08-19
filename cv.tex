@@ -1,0 +1,176 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+\usepackage{paracol}
+
+
+\ifxetexorluatex
+  \setmainfont{Lato}
+\else
+  \usepackage[default]{lato}
+\fi
+
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{tagline}{VividPurple}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\addbibresource{biblio.bib}
+
+\begin{document}
+\name{Lorenzo Soligo}
+\tagline{computer scientist | teacher | knowledge lover}
+\photoR{2.5cm}{photo}
+\personalinfo{%
+  \email{lorenzo.soligo.tv96@gmail.com}
+  \location{Treviso, TV, Italy}
+  \github{LolloneS}
+  \linkedin{lorenzo-soligo}
+  \phone{+39 3452933616}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{\faPython ~ Software Engineering Intern}{Cryptosense}{Summer 2019}{Paris, France}
+\begin{itemize}
+\item I added functionalities to Discovery, a tool that automatically detects misconfigurations and vulnerabilities in TLS and SSH deployments
+\item I drastically improved Python knowledge and learned how to use common tools in the industry (Black, MyPy, Flake8, ...)
+\item I learned how to build efficient and secure code
+\item I participated in code review processes and meetings
+\end{itemize}
+
+\divider
+
+\cvevent{\faBookOpen ~ Tutor of the Master's Degree in Digital Humanities}{Ca' Foscari University of Venice}{March 2019 -- Current}{Venice, Italy}
+\begin{itemize}
+\item I teach students a wide range of tools and competences including programming (Python, JavaScript), databases (MySQL), WordPress, data visualization (Flourish, DataWrapper, ...), augmented reality (Wikitude Studio), and best practices in cybersecurity
+\item I help students with their final projects. Additional tools for text annotation, text analysis, frontend and backend development are needed and I help students learn and exploit them to succeed in their projects
+\item I learned how to balance domain-specific terms and easily understandable explanations. This greatly improved my way of teaching and explaining concepts
+\end{itemize}
+
+
+\divider
+
+\cvevent{\faCloud ~ Google Summer of Code Student}{Google}{Summer 2018}{Remote}
+\begin{itemize}
+\item After a thorough analysis of all the available tools' pros and cons, I implemented CI/CD pipelines in Kubernetes using Drone
+\item I improved a deployment plugin for Drone by adding some useful options that were not available out-of-the-box
+\item I had to meet strict deadlines while graduating from my Bachelor's Degree, which heavily tested my time management skills
+\item I learned how microservices work and had the chance to experiment with a real cluster
+\item I was one of the 1,090 successful students out of 25,873 candidates   
+\end{itemize}
+
+\divider
+
+\cvevent{\faMapMarked ~ Research Fellow in Computer Vision}{Ca' Foscari University of Venice}{2019 -- 2020}{Venice, Italy}
+\begin{itemize}
+\item I worked on the Venice Time Machine project. The goal is to digitize ancient Venetian documents such as wills through a Machine Learning and Computer Vision/Pattern Recognition pipeline.
+\item I learned how to use Numpy and OpenCV
+\item I tested the limits of many existent Computer Vision and Deep Learning algorithms for word segmentation 
+\end{itemize}
+% \divider
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the currentc column
+% \newpage
+
+\cvsection{Publications}
+
+\nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+% \divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}}, type=article]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Education}
+\cvevent{M.S.\ in Computer Science}{Ca' Foscari University of Venice}{Sept 2018 -- July 2020}{} 110/110, \textit{somma cum laude}
+\\ \divider
+\cvevent{B.S.\ in Computer Science}{University of Milan-Bicocca}{Oct 2015 -- July 2018}{} 110/110, \textit{somma cum laude}
+
+
+\cvsection{Projects on GitHub}
+\cvachievement{\faVideo}{3D-Laser-Scanner}{Python tool that reconstructs 3D objects from videos where a laser beam is projected onto the scene. Developed using Python and OpenCV.}
+
+\divider
+
+\cvachievement{\faSpaceShuttle}{DDPG-PyTorch}{Implementation of the DDPG Deep Reinforcement Learning algorithm using Python and PyTorch.}
+
+\divider
+
+\cvachievement{\faKeyboard}{Manifold-Learning-and-Graph-Kernels}{Implementation of the Weisfeiler-Lehman graph kernel in pure Python. Usage of the kernel in combination with manifold learning.}
+
+\divider
+
+\cvachievement{\faRobot}{N-Queens-Solvers}{Classic AI algorithms to solve the n-queens problem: constraint propagation \& backtracking, hill climbing, simulated annealing.}
+
+
+\cvsection{Soft skills}
+
+\cvtag{Hard-working}
+\cvtag{Motivator}
+\cvtag{Leader}
+\cvtag{Outgoing}
+\cvtag{Sympathetic}
+\cvtag{Willing to learn}
+\cvtag{Enthusiastic teacher}
+
+\cvsection{Technical skills}
+
+\cvtag{Python}
+\cvtag{C++}
+\cvtag{JavaScript}\\
+\cvtag{Docker}
+\cvtag{Kubernetes}
+\cvtag{Virtualization}\\
+\cvtag{Reverse Engineering}
+\cvtag{Security Auditing}
+\cvtag{Deep Learning}
+\cvtag{Computer Vision}
+
+
+\cvsection{Languages}
+
+\cvskill{Italian}{5}
+% \divider
+
+\cvskill{English}{5}
+% \divider
+
+\cvskill{German}{1}
+
+\cvskill{French}{1}
+
+
+\end{paracol}
+
+\end{document}
